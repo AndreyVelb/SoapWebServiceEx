@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: "my_bank_db"
+      POSTGRES_USER: "bank_admin"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_HOST_AUTH_METHOD: "md5"
